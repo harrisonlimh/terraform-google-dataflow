@@ -61,7 +61,15 @@ module "dataflow-bucket" {
 }
 
 module "dataflow-job" {
+<<<<<<< HEAD
   source  = "terraform-google-modules/dataflow/google//modules/legacy"
+=======
+<<<<<<< HEAD
+  source  = "terraform-google-modules/dataflow/google//modules/legacy"
+=======
+  source  = "terraform-google-modules/dataflow/google"
+>>>>>>> origin
+>>>>>>> origin/feature/adc_integration
   version = "~> 2.0"
 
   project_id            = var.project_id
