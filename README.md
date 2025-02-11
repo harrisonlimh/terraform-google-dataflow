@@ -56,7 +56,11 @@ Then perform the following commands on the root folder:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | additional\_experiments | List of experiments that should be used by the job. An example value is `['enable_stackdriver_agent_metrics']` | `list(string)` | `[]` | no |
+<<<<<<< HEAD
 | enable\_streaming\_engine | Enable/disable the use of Streaming Engine for the job. | `bool` | `false` | no |
+=======
+| ip\_configuration | The configuration for VM IPs. Options are 'WORKER\_IP\_PUBLIC' or 'WORKER\_IP\_PRIVATE'. | `string` | `null` | no |
+>>>>>>> origin
 | kms\_key\_name | The name for the Cloud KMS key for the job. Key format is: projects/PROJECT\_ID/locations/LOCATION/keyRings/KEY\_RING/cryptoKeys/KEY | `string` | `null` | no |
 | labels | User labels to be specified for the job. | `map(string)` | `{}` | no |
 | machine\_type | The machine type to use for the job. | `string` | `""` | no |
