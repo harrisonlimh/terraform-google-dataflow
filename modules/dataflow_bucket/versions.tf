@@ -20,12 +20,12 @@ terraform {
 
     google = {
       source  = "hashicorp/google"
-      version = ">= 3.53, < 6"
+      version = ">= 3.53, < 7"
     }
   }
 
   provider_meta "google" {
-    module_name = "blueprints/terraform/terraform-google-dataflow:dataflow_bucket/v2.2.0"
+    module_name = "blueprints/terraform/terraform-google-dataflow:dataflow_bucket/v2.5.0"
   }
 
 }

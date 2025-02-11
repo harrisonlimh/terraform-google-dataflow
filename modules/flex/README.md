@@ -56,9 +56,12 @@ Then perform the following commands on the root folder:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | additional\_experiments | List of experiments that should be used by the job. An example value is `['enable_stackdriver_agent_metrics']` | `list(string)` | `[]` | no |
+| autoscaling\_algorithm | The algorithm to use for autoscaling. | `string` | `null` | no |
+| container\_spec\_gcs\_path | The GCS path to the Dataflow job Flex Template. | `string` | n/a | yes |
 | enable\_streaming\_engine | Enable/disable the use of Streaming Engine for the job. | `bool` | `false` | no |
 | kms\_key\_name | The name for the Cloud KMS key for the job. Key format is: projects/PROJECT\_ID/locations/LOCATION/keyRings/KEY\_RING/cryptoKeys/KEY | `string` | `null` | no |
 | labels | User labels to be specified for the job. | `map(string)` | `{}` | no |
+| launcher\_machine\_type | The machine type to use for launching the job. | `string` | `""` | no |
 | machine\_type | The machine type to use for the job. | `string` | `""` | no |
 | max\_workers | The number of workers permitted to work on the job. More workers may improve processing speed at additional cost. | `number` | `1` | no |
 | name | The name of the dataflow job | `string` | n/a | yes |
@@ -67,22 +70,22 @@ Then perform the following commands on the root folder:
 | parameters | Key/Value pairs to be passed to the Dataflow job (as used in the template). | `map(string)` | `{}` | no |
 | project\_id | The project in which the resource belongs. If it is not provided, the provider project is used. | `string` | n/a | yes |
 | region | The region in which the created job should run. Also determines the location of the staging bucket if created. | `string` | `"us-central1"` | no |
+| sdk\_container\_image | Docker registry location of container image to use for the 'worker harness. Default is the container for the version of the SDK. Note this field is only valid for portable pipelines. | `string` | `null` | no |
 | service\_account\_email | The Service Account email that will be used to identify the VMs in which the jobs are running | `string` | `""` | no |
 | skip\_wait\_on\_job\_termination | If set to true, terraform will treat DRAINING and CANCELLING as terminal states when deleting the resource, and will remove the resource from terraform state and move on. | `bool` | `false` | no |
 | subnetwork | The subnetwork to which VMs will be assigned. If provided, it should be of the form of 'regions/REGION/subnetworks/SUBNETWORK'. | `string` | `""` | no |
-| temp\_gcs\_location | A writeable location on GCS for the Dataflow job to dump its temporary data. It will be used to form the temp location path for the job, 'gs://TEMP\_GCS\_LOCATION/tmp\_dir'. | `string` | n/a | yes |
-| template\_gcs\_path | The GCS path to the Dataflow job template. | `string` | n/a | yes |
+| temp\_location | The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with gs://. | `string` | `null` | no |
 | use\_public\_ips | Specifies whether Dataflow workers use external IP addresses. If the value is set to false, Dataflow workers use internal IP addresses for all communication. | `bool` | `false` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| container\_spec\_gcs\_path | The GCS path to the Dataflow job Flex Template. |
 | id | The unique Id of the newly created Dataflow job |
 | name | The name of the dataflow job |
 | state | The state of the newly created Dataflow job |
-| temp\_gcs\_location | The GCS path for the Dataflow job's temporary data. |
-| template\_gcs\_path | The GCS path to the Dataflow job template. |
+| temp\_location | The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with gs://. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

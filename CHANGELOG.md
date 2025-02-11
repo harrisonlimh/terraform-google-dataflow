@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.5.0](https://github.com/terraform-google-modules/terraform-google-dataflow/compare/v2.4.0...v2.5.0) (2024-10-30)
+
+
+### Features
+
+* **deps:** Update Terraform google to v6 ([#79](https://github.com/terraform-google-modules/terraform-google-dataflow/issues/79)) ([ec28497](https://github.com/terraform-google-modules/terraform-google-dataflow/commit/ec284970e085e9715a53d962ccd9b924b287c50d))
+
+## [2.4.0](https://github.com/terraform-google-modules/terraform-google-dataflow/compare/v2.3.0...v2.4.0) (2023-12-14)
+
+
+### Features
+
+* Add support for additional_experiments dataflow job field ([#64](https://github.com/terraform-google-modules/terraform-google-dataflow/issues/64)) ([5e1c674](https://github.com/terraform-google-modules/terraform-google-dataflow/commit/5e1c674624b660c6d63aa571dfeccafbdfc279f1))
+
+## [2.3.0](https://github.com/terraform-google-modules/terraform-google-dataflow/compare/v2.2.0...v2.3.0) (2023-12-08)
+
+
+### Features
+
+* Adds support to labels ([#57](https://github.com/terraform-google-modules/terraform-google-dataflow/issues/57)) ([61341f0](https://github.com/terraform-google-modules/terraform-google-dataflow/commit/61341f0fd2b6d0dc2c381484c1acd947da6de533))
+
+
+### Bug Fixes
+
+* upgraded versions.tf to include minor bumps from tpg v5 ([#60](https://github.com/terraform-google-modules/terraform-google-dataflow/issues/60)) ([b70ddf9](https://github.com/terraform-google-modules/terraform-google-dataflow/commit/b70ddf99fc4a1ee4a86f114a5d4783dc52d911db))
+
 ## [2.2.0](https://github.com/terraform-google-modules/terraform-google-dataflow/compare/v2.1.0...v2.2.0) (2022-02-23)
 
 
