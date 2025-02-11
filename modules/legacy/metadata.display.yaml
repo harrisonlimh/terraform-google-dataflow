@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+# Copyright 2025 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+>>>>>>> refs/remotes/origin/feature/adc_integration
 apiVersion: blueprints.cloud.google.com/v1alpha1
 kind: BlueprintMetadata
 metadata:
@@ -16,9 +33,12 @@ spec:
         additional_experiments:
           name: additional_experiments
           title: Additional Experiments
+<<<<<<< HEAD
         enable_streaming_engine:
           name: enable_streaming_engine
           title: Enable Streaming Engine
+=======
+>>>>>>> refs/remotes/origin/feature/adc_integration
         ip_configuration:
           name: ip_configuration
           title: Ip Configuration
@@ -37,9 +57,12 @@ spec:
         name:
           name: name
           title: Name
+<<<<<<< HEAD
         network_name:
           name: network_name
           title: Network Name
+=======
+>>>>>>> refs/remotes/origin/feature/adc_integration
         network_self_link:
           name: network_self_link
           title: Network Self Link
@@ -58,12 +81,15 @@ spec:
         service_account_email:
           name: service_account_email
           title: Service Account Email
+<<<<<<< HEAD
         skip_wait_on_job_termination:
           name: skip_wait_on_job_termination
           title: Skip Wait On Job Termination
         subnetwork:
           name: subnetwork
           title: Subnetwork
+=======
+>>>>>>> refs/remotes/origin/feature/adc_integration
         subnetwork_self_link:
           name: subnetwork_self_link
           title: Subnetwork Self Link
@@ -73,9 +99,12 @@ spec:
         template_gcs_path:
           name: template_gcs_path
           title: Template Gcs Path
+<<<<<<< HEAD
         use_public_ips:
           name: use_public_ips
           title: Use Public Ips
+=======
+>>>>>>> refs/remotes/origin/feature/adc_integration
         zone:
           name: zone
           title: Zone
